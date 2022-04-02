@@ -6,7 +6,7 @@ const getTopArtists = () => {
     `${baseUrl}?method=chart.gettopartists&api_key=${API_KEY}&format=json`
   )
     .then((response) => response.json())
-    .then((data) => data.topartists.artist);
+    .then((data) => data.artists.artist);
 };
 const getTopTracks = () => {
   return fetch(
