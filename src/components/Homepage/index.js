@@ -1,19 +1,26 @@
 import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
-import { getTopArtists, getTopAlbums, getTopTracks } from "../../services";
+import { getTopArtists } from "../../services";
+import { useDispatch } from "react-redux";
+import { setArtist } from "../../features/artistSlice";
 import "./style.css";
 const Homepage = () => {
-  console.log(getTopAlbums());
+  const dispatch = useDispatch();
   const history = useHistory();
   const [topArtists, setTopArtists] = useState([]);
+
   const getTopArtist = async () => {
     const response = await getTopArtists();
     setTopArtists(response);
   };
+
   useEffect(() => {
     getTopArtist();
   }, []);
-
+  const handleClick = (artist) => {
+    dispatch(setArtist(artist));
+    history.push("/details");
+  };
   return (
     <div className="homepage-area">
       <div>
@@ -25,7 +32,7 @@ const Homepage = () => {
             <div
               className="artists"
               key={artist.mbid}
-              onClick={() => history.push("/details")}
+              onClick={() => handleClick(artist.name)}
             >
               <div>
                 <img src={artist.image[0]["#text"]} alt={artist.name} />

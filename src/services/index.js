@@ -8,17 +8,17 @@ const getTopArtists = () => {
     .then((response) => response.json())
     .then((data) => data.artists.artist);
 };
-const getTopTracks = () => {
+const getTopTracks = (artist) => {
   return fetch(
-    `${baseUrl}?method=artist.gettoptracks&artist=cher&api_key=${API_KEY}&format=json`
+    `${baseUrl}?method=artist.gettoptracks&artist=${artist}&api_key=${API_KEY}&format=json`
   )
     .then((response) => response.json())
     .then((data) => data.toptracks.track);
 };
 
-const getTopAlbums = () => {
+const getTopAlbums = (artist) => {
   return fetch(
-    `${baseUrl}?method=artist.gettopalbums&artist=cher&api_key=${API_KEY}&format=json`
+    `${baseUrl}?method=artist.gettopalbums&artist=${artist}&api_key=${API_KEY}&format=json`
   )
     .then((response) => response.json())
     .then((data) => data.topalbums.album);
