@@ -1,0 +1,29 @@
+.card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15px;
+    margin-top: 4px;
+    background-color: #1DB954;
+
+
+}
+.left-area{
+    display: flex;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+.left-text{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 10px;
+    font-weight: bold;
+}
+.right-area{
+    margin-top: 5px;
+    margin-right: 5px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}

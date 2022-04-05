@@ -1,19 +1,21 @@
 import React, { useEffect, useState } from "react";
-
 import { useSelector } from "react-redux";
 import { selectArtist } from "../../features/artistSlice";
 import { getTopAlbums, getTopTracks } from "../../services";
+import DetailsCard from "../detailsCard";
+import "./style.css";
 const Details = () => {
   const artist = useSelector(selectArtist);
   const [albums, setAlbums] = useState([]);
   const [tracks, setTracks] = useState([]);
+
   const getAlbums = async () => {
-    const response = await getTopAlbums(artist.artist);
-    setAlbums(response);
+    const data = await getTopAlbums(artist.artist);
+    setAlbums(data);
   };
   const getTracks = async () => {
-    const response = await getTopTracks(artist.artist);
-    setTracks(response);
+    const data = await getTopTracks(artist.artist);
+    setTracks(data);
   };
 
   useEffect(() => {
@@ -22,30 +24,43 @@ const Details = () => {
   }, [artist]);
 
   return (
-    <div>
-      <h1>{artist.artist}</h1>
-      {albums.map((album) => {
-        return (
-          <div key={album.mbid}>
-            <img src={album.image[0]["#text"]} alt={album.name} />
-            <div>Album: {album.name}</div>
-            <div>playcount: {album.playcount}</div>
+    <>
+      <div className="area">
+        <div className="artist-name">
+          <h1>{artist.artist}</h1>
+        </div>
+        <div className="details-area">
+          <div className="album-area">
+            <h5>Top Albums</h5>
+            {albums.map((album) => {
+              return (
+                <DetailsCard
+                  image={album.image[1]["#text"]}
+                  album={album.name}
+                  playcount={album.playcount}
+                  alt={album.name}
+                />
+              );
+            })}
           </div>
-        );
-      })}
-      <div>
-        <h1>Top Tracks</h1>
-        {tracks.map((track) => {
-          return (
-            <div key={track.mbid}>
-              <img src={track.image[0]["#text"]} alt={track.name} />
-              <div>Track: {track.name}</div>
-              <div>playcount: {track.playcount}</div>
-            </div>
-          );
-        })}
+          <div className="tracks-area">
+            <h5>Top Tracks</h5>
+            {tracks.map((track) => {
+              return (
+                <DetailsCard
+                  image={track.image[1]["#text"]}
+                  album={track.name}
+                  playcount={track.playcount}
+                  alt={track.name}
+                  listener={track.listeners}
+                  label={"listeners"}
+                />
+              );
+            })}
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

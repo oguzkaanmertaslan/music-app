@@ -2,9 +2,10 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Details from "../Details";
 import Homepage from "../Homepage";
+import "./style.css";
 const Navbar = () => {
   return (
-    <div>
+    <div className="page-area">
       <Router>
         <nav>
           <Link to="/details" />

@@ -1,0 +1,47 @@
+.area{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 50px;
+    background-color: #000000;
+}
+.artist-name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    width: 95%;
+    border-radius: 15px;
+    margin-top: 25px;
+    background-color: #1DB954;
+
+}
+.details-area{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 95%;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    margin-top: 25px;
+}
+.album-area{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+.tracks-area{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+h5{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
