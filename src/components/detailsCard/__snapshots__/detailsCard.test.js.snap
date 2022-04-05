@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DetailsCard Snapshot 1`] = `
+<div
+  className="card"
+>
+  <div
+    className="left-area"
+  >
+    <div
+      className="image-area"
+    >
+      <img
+        className="image-area"
+      />
+    </div>
+    <div
+      className="left-text"
+    >
+      <br />
+    </div>
+  </div>
+  <div
+    className="right-area"
+  >
+    <div>
+       play
+    </div>
+  </div>
+</div>
+`;

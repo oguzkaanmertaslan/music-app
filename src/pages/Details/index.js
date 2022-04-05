@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { selectArtist } from "../../features/artistSlice";
 import { getTopAlbums, getTopTracks } from "../../services";
-import DetailsCard from "../detailsCard";
+import DetailsCard from "../../components/detailsCard";
 import "./style.css";
 const Details = () => {
   const artist = useSelector(selectArtist);

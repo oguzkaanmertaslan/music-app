@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 import { getTopArtists } from "../../services";
 import { useDispatch } from "react-redux";
 import { setArtist } from "../../features/artistSlice";
-import ArtistCard from "../artistCard";
+import ArtistCard from "../../components/artistCard";
 import "./style.css";
 
 const Homepage = () => {

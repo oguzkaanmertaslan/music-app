@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Details from "../Details";
-import Homepage from "../Homepage";
+import Details from "../../pages/Details";
+import Homepage from "../../pages/Homepage";
 import "./style.css";
 const Navbar = () => {
   return (
