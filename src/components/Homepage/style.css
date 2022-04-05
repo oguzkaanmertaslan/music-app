@@ -6,8 +6,9 @@
     height: 90vh;
     width: 100%;
     margin-top: 50px;
-    background-color: #000000;
+    background-color: #ffffff;
 }
+
 .artists{
     display: flex;
     justify-content: center;
@@ -25,9 +26,25 @@
     width: 75%;
     overflow: hidden;
     overflow-y: scroll;
+    background-color: #ffffff;
+}
+.dark-mode .homepage-area{
     background-color: #000000;
+}
+.dark-mode .artists-area{
+    background-color: #000000;
+}
+.dark-mode h1{
+    color: #ffffff;
 }
 ::-webkit-scrollbar{
     width: 15px;
 }
+
+@media screen and (max-width: 916px){
+    .artists-area{
+        width: 100%;
+    }
+}
+
 

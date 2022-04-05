@@ -6,6 +6,9 @@
     border-radius: 5px;
     width: 100%;
     margin-top: 50px;
+    background-color: #ffffff;
+}
+.dark-mode .area{
     background-color: #000000;
 }
 .artist-name{
@@ -44,4 +47,19 @@ h5{
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 1rem;
+}
+@media screen and (max-width: 915px){
+    .artist-name{
+        font-size: 1rem;
+    }
+    .details-area{
+        flex-direction: column;
+        width: 100%;
+    }
+    .album-area{
+        width: 100%;
+    }
+    .tracks-area{
+        width: 100%;
+    }
 }

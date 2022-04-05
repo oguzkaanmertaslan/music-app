@@ -8,6 +8,7 @@
     width: 75%;
     background-color: #1DB954;
 }
+
 .left-area{
     display: flex;
     margin-top: 5px;
@@ -28,4 +29,12 @@
 }
 .image-area{
     border-radius: 10px;
+}
+@media screen and (max-width: 490px){
+   .left-text{
+       font-size: 12px;
+   }
+   .right-area{
+       font-size: 12px;
+   }
 }

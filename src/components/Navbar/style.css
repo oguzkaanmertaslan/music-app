@@ -1,4 +1,8 @@
 .page-area{
     display: flex;
     justify-content: center;
+    background-color: #ffffff;
+}
+.dark-mode .page-area{
+    background-color: #000000;
 }

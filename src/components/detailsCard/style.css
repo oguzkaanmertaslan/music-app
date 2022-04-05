@@ -19,7 +19,7 @@
     font-weight: bold;
     font-family: Segoe UI,Tahoma,Geneva,Verdana,sans-serif;
     font-weight: lighter;
-    color: #ffffff;
+    color: #000000;
 }
 .right-area{
     margin-top: 5px;
@@ -29,15 +29,26 @@
     flex-direction: column;
     font-family: Segoe UI,Tahoma,Geneva,Verdana,sans-serif;
     font-weight: lighter;
-    color: #ffffff;
+    color: #000000;
 }
+
 h5{
     font-family: Segoe UI,Tahoma,Geneva,Verdana,sans-serif;
     font-weight: lighter;
-    color: #ffffff;
+    color: #000000;
 }
+
 h1{
     font-family: Segoe UI,Tahoma,Geneva,Verdana,sans-serif;
     font-weight: lighter;
+    color: #000000;
+}
+.dark-mode .left-text{
+    color: #ffffff;
+}
+.dark-mode .right-area{
+    color: #ffffff;
+}
+.dark-mode h5{
     color: #ffffff;
 }
