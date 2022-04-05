@@ -19,9 +19,10 @@ const Details = () => {
   };
 
   useEffect(() => {
-    getAlbums();
     getTracks();
-  }, [artist]);
+    getAlbums();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <>
@@ -39,6 +40,7 @@ const Details = () => {
                   album={album.name}
                   playcount={album.playcount}
                   alt={album.name}
+                  artist={artist.artist}
                 />
               );
             })}
@@ -54,6 +56,7 @@ const Details = () => {
                   alt={track.name}
                   listener={track.listeners}
                   label={"listeners"}
+                  artist={artist.artist}
                 />
               );
             })}

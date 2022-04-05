@@ -5,8 +5,6 @@
     border-radius: 15px;
     margin-top: 4px;
     background-color: #1DB954;
-
-
 }
 .left-area{
     display: flex;
@@ -19,6 +17,9 @@
     flex-direction: column;
     margin-left: 10px;
     font-weight: bold;
+    font-family: Segoe UI,Tahoma,Geneva,Verdana,sans-serif;
+    font-weight: lighter;
+    color: #ffffff;
 }
 .right-area{
     margin-top: 5px;
@@ -26,4 +27,17 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+    font-family: Segoe UI,Tahoma,Geneva,Verdana,sans-serif;
+    font-weight: lighter;
+    color: #ffffff;
+}
+h5{
+    font-family: Segoe UI,Tahoma,Geneva,Verdana,sans-serif;
+    font-weight: lighter;
+    color: #ffffff;
+}
+h1{
+    font-family: Segoe UI,Tahoma,Geneva,Verdana,sans-serif;
+    font-weight: lighter;
+    color: #ffffff;
 }
